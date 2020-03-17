@@ -1,0 +1,1 @@
+read -p "change direcroty / want to put db directory > " d1 d2; printf '%1s\033[31m%2s\033[m\n' "your change directory → " $d1; printf '%1s\033[31m%2s\033[m\n' "your backup directory → " $d2; cd $d1; while true; do wp db export "$d2"backup_`date +%Y-%m-%d-%H-%M-%S`.sql; sleep 3600; done
